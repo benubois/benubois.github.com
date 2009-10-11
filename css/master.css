@@ -71,7 +71,7 @@ a:hover,a:active {
 }
 h1, h2, h3, h4, h5, h6 {
 	font-weight:normal;
-	font-family: Arial;
+	font-family: Helvetica, Arial sans-serif;
 }
 h2 {
 	font-size: 1.2em;
@@ -122,7 +122,7 @@ abbr {
 }
 #nav {
 	float: right;
-	padding-top: 4px;
+	padding-top: 2px;
 	text-align: right;
 	width: 330px;
 }
@@ -133,14 +133,14 @@ abbr {
 #nav li a {
 	font-weight: bold;
 	text-decoration: none;
-	font-family: Arial;
+	font-family: Helvetica, Arial;
 	font-size: 12px;
 }
 #footer p {
 	border-top: 1px dotted #BEBEBE;
 	padding: 1em 0 0;
 	margin: 1em 0 0;
-	font-family: Arial;
+	font-family: Helvetica, Arial, sans-serif;
 	font-size: 11px;
 }
 
@@ -198,7 +198,7 @@ pre,
 }
 #content-wrap .gist .gist-file .gist-meta {
 	background: #FFF;
-	font-family: Arial, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 	font-size: 12px;
 	padding-left: 0;
 	padding-right: 0;
