@@ -55,11 +55,12 @@ table {
 -------------------------------------------------------*/
 body {
 	font-family: Georgia;
-	font-size: 13px;
-	line-height: 1.5em;
+	font-size: 15px;
+	line-height: 1.5;
+	color: #424254;
 }
 a,a:visited {
-	color: #4B6799;
+	color: #3061BE;
 }
 a:hover,a:active {
 	color: #000;
@@ -68,17 +69,20 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight:normal;
 	font-family: Arial;
 }
-h1 {
-	font-size:3em;
-	line-height:1;
-	margin-bottom:0.5em;
-}
 h2 {
-	font-size:2em;
-	margin-bottom:0.75em;
+	font-size: 1.2em;
+	margin-bottom: 0.2em;
+}
+h2 a {
+	text-decoration: none;
+}
+h3 {
+	font-size: 1em;
+	margin-bottom: 0.2em;
+	font-weight: bold;
 }
 p {
-	margin:0 0 1.5em;
+	margin:0 0 1.2em;
 }
 pre {
 	font-family: Consolas, Monaco, monospace;
@@ -87,6 +91,15 @@ pre {
 	background: #E9E9E9;
 	font-weight: bold;
 	overflow: auto;
+}
+code {
+	font-family: Consolas, Monaco, monospace;
+	font-size: 12px;
+	background: #E9E9E9;
+}
+abbr {
+	border-bottom: 1px dotted #ccc;
+	cursor: help;
 }
 
 /* - Structure
@@ -133,13 +146,15 @@ pre {
 	font-size: 12px;
 }
 #footer p {
+	border-top: 1px dotted #BEBEBE;
+	padding: 1em 0 0;
+	margin: 1em 0 0;
 	font-family: Arial;
 	font-size: 11px;
 }
 .post {
-	border-bottom: 1px dotted #BEBEBE;
-	padding: 0 0 1.5em;
-	margin: 0 0 1.5em;
+	padding: 0 0 .5em;
+	margin: 0 0 .5em;
 	overflow: hidden;
 }
 .post h2 {
@@ -154,14 +169,16 @@ pre {
 	font-size: 10px;
 	color: #424242;
 	font-family: Verdana;
+	margin-top: 3px;
 }
 .post-content {
 	width: 510px;
 	float: left;
-	font-size: 15px;
-	color: #424254;
 }
 
+.meta {
+	color: #808080;
+}
 
 /* - Pygments
 -------------------------------------------------------*/

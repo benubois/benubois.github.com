@@ -3,5 +3,5 @@ layout: default
 ---
 
 <h2>{{ page.title }}</h2>
-<p><strong>{{ date }}</strong></p>
+<p class="meta"><strong>{{ page.date | date_to_long_string }}</strong></p>
 {{ content }}

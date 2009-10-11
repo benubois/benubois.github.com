@@ -12,7 +12,7 @@ title: Ben
 		</p>
 	</div>
 	<div class="post-content">
-		{{ post.content }}
+		{{ post.excerpt | textilize }}
 	</div>
 </div>
 {% endfor %}
