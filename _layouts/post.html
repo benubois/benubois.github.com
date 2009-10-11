@@ -2,6 +2,14 @@
 layout: default
 ---
 
-<h2>{{ page.title }}</h2>
-<p class="meta"><strong>{{ page.date | date: "%B %d, %Y" }}</strong></p>
-{{ content }}
+<div class="post">
+	<h2><a href="{{ post.url }}">{{ page.title }}</a></h2>
+	<div class="post-meta">
+		<p>
+			<strong>{{ page.date | date: "%B %d, %Y" }}</strong>
+		</p>
+	</div>
+	<div class="post-content">
+		{{ content }}
+	</div>
+</div>
