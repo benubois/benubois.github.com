@@ -53,11 +53,15 @@ table {
 
 /* - HTML Elements
 -------------------------------------------------------*/
+html {
+	overflow-y: scroll;
+}
 body {
-	font-family: Georgia;
+	font-family: Georgia, serif;
 	font-size: 15px;
 	line-height: 1.5;
 	color: #424254;
+	padding-bottom: 20px;
 }
 a,a:visited {
 	color: #3061BE;
@@ -83,19 +87,6 @@ h3 {
 }
 p {
 	margin:0 0 1.2em;
-}
-pre {
-	font-family: Consolas, Monaco, monospace;
-	font-size: 12px;
-	padding: 5px 10px;
-	background: #E9E9E9;
-	font-weight: bold;
-	overflow: auto;
-}
-code {
-	font-family: Consolas, Monaco, monospace;
-	font-size: 12px;
-	background: #E9E9E9;
 }
 abbr {
 	border-bottom: 1px dotted #ccc;
@@ -153,8 +144,8 @@ abbr {
 	font-size: 11px;
 }
 .post {
-	padding: 0 0 .5em;
-	margin: 0 0 .5em;
+	padding: .5em 0 0;
+	margin: .5em 0 0;
 	overflow: hidden;
 }
 .post h2 {
@@ -175,13 +166,47 @@ abbr {
 	width: 510px;
 	float: left;
 }
-
+.border {
+	border-top: 1px dotted #BEBEBE;
+}
 .meta {
 	color: #808080;
 }
 
-/* - Pygments
+/* - Code
 -------------------------------------------------------*/
+code {
+	font-family: Consolas, Monaco, monospace;
+	font-size: 12px;
+	background: #E9E9E9;
+}
+pre,
+#content-wrap .gist .gist-file .gist-data pre {
+	font-family: Consolas, Monaco, monospace !important;
+	font-size: 12px;
+	padding: 5px 10px;
+	background: #E9E9E9 !important;
+	font-weight: bold;
+	overflow: auto;
+	border: none !important;
+}
+#content-wrap .gist .gist-file .gist-meta {
+	background: #FFF;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	padding-left: 0;
+	padding-right: 0;
+}
+#content-wrap .gist .gist-file .gist-meta a,a:visited {
+	color: #3061BE;
+}
+#content-wrap .gist .gist-file .gist-meta a:hover,a:active {
+	color: #000;
+}
+#content-wrap .gist .gist-file {
+	border: none;
+}
+/*--[ Highlight ]--*/
 .highlight  { background: #ffffff; }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
