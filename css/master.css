@@ -197,10 +197,12 @@ pre,
 	padding-left: 0;
 	padding-right: 0;
 }
-#content-wrap .gist .gist-file .gist-meta a,a:visited {
+#content-wrap .gist .gist-file .gist-meta a,
+#content-wrap .gist .gist-file .gist-meta a:visited {
 	color: #3061BE;
 }
-#content-wrap .gist .gist-file .gist-meta a:hover,a:active {
+#content-wrap .gist .gist-file .gist-meta a:hover,
+#content-wrap .gist .gist-file .gist-meta a:active {
 	color: #000;
 }
 #content-wrap .gist .gist-file {
