@@ -18,7 +18,7 @@ Did I mention I’m obsessed with tools? [TextMate][tm] is the my favorite and I
 [sn]: http://www.simplenoteapp.com/
 [nnw]: http://www.newsgator.com/INDIVIDUALS/NETNEWSWIRE/
 
-## Feeds
+### Feeds
 
 I read a lot of websites. Here’s what I’m currently subscribed to:
 
@@ -100,10 +100,10 @@ I read a lot of websites. Here’s what I’m currently subscribed to:
 * [Disco](http://discoapp.com/blog)
 * [dive into mark](http://diveintomark.org/)
 * [Domaki](http://playgroundblues.com/posts/)
-</div>
-<div markdown="1" class="span-5 colborder">
 * [Dr Nic](http://drnicwilliams.com)
 * [Drupal 7 User Experience Project](http://www.d7ux.org)
+</div>
+<div markdown="1" class="span-5 colborder">
 * [Educated Guesswork](http://www.educatedguesswork.org/)
 * [EE Blog](http://expressionengine.com/blog/)
 * [Elizabeth Belg](http://www.elizabethbelg.com)
@@ -179,10 +179,10 @@ I read a lot of websites. Here’s what I’m currently subscribed to:
 * [Official Google Blog](http://googleblog.blogspot.com/)
 * [Official Google Mac Blog](http://googlemac.blogspot.com/)
 * [Official Google Mobile Blog](http://googlemobile.blogspot.com/)
-</div>
-<div markdown="1" class="span-6 last">
 * [Official Google Reader Blog](http://googlereader.blogspot.com/)
 * [Out of Cheese](http://outofcheese.org)
+</div>
+<div markdown="1" class="span-6 last">
 * [Panic News Channel](http://panic.com/)
 * [Particletree](http://particletree.com)
 * [PaulStamatiou.com](http://paulstamatiou.com)

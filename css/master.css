@@ -195,7 +195,7 @@ abbr {
 
 /* - Misc 
 -------------------------------------------------------*/
-.border {
+.separator {
 	border-top: 1px dotted #BEBEBE;
 }
 .meta {
@@ -265,6 +265,9 @@ pre,
 }
 #content-wrap .gist .gist-file {
 	border: none;
+}
+div.highlight {
+	margin-bottom: 1.2em;
 }
 /*--[ Highlight ]--*/
 .highlight  { background: #ffffff; }
