@@ -7,7 +7,7 @@ Delicious has a feature I like. Whenever you bookmark something, you have the op
 
 The advantage the Delicious implementation has over browser bound versions, is that it provides an easy way to synchronize all of your bookmarks, including keywords, across multiple computers by installing the [Delicious Bookmarks](https://addons.mozilla.org/en-US/firefox/addon/3615) plugin. 
 
-I prefer Safari to Firefox which means I can&rsquo;t use any of this in my favorite browser. Fortunately there's Shaun Inman&rsquo;s [Shortwave](http://shortwaveapp.com/ "Shortwave ~ an extensible quick-search and shortcut bookmark"). Shortwave provides the same URL keyword functionality of Delicious, but does it using a JavaScript bookmarklet. This means it will work on just about any browser, including Safari for the iPhone.
+I prefer Safari to Firefox which means I can’t use any of this in my favorite browser. Fortunately there's Shaun Inman’s [Shortwave](http://shortwaveapp.com/ "Shortwave ~ an extensible quick-search and shortcut bookmark"). Shortwave provides the same URL keyword functionality of Delicious, but does it using a JavaScript bookmarklet. This means it will work on just about any browser, including Safari for the iPhone.
 
 Shortwave stores all of your keywords in a text file on your own webserver, so it will work from any location. However, I wanted a way to import my existing Delicious keywords AND an easy way to add new keywords. Using the [Delicious Feeds API](http://delicious.com/help/feeds "delicious/help/feeds") I'm able to do this. The process is straightforward. I query my bookmarks looking for a specific tag, then write the results to a text file in the format that Shortwave expects.
 
