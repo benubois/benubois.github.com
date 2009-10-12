@@ -4,14 +4,14 @@ title: Blog
 ---
 
 {% for post in site.posts %}
-<div class="post{% cycle ' ', ' border' %}">
+<div class="container post{% unless forloop.index == 1 %} border{% endunless %}">
 	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-	<div class="post-meta">
+	<div class="post-meta span-3">
 		<p>
 			<strong>{{ post.date | date: "%B %d, %Y" }}</strong>
 		</p>
 	</div>
-	<div class="post-content">
+	<div class="post-content span-15 last">
 		{{ post.content }}
 	</div>
 </div>

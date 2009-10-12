@@ -51,6 +51,39 @@ table {
 	overflow: hidden;
 }
 
+/* - Grid
+-------------------------------------------------------*/
+.container {
+	width: 710px;
+	margin: 0 auto;
+}
+.column,div.span-1,div.span-2,div.span-3,div.span-4,div.span-5,div.span-6,div.span-7,div.span-8,div.span-9,div.span-10,div.span-11,div.span-12,div.span-13,div.span-14,div.span-15,div.span-16,div.span-17,div.span-18 {
+	float: left;
+	margin-right: 10px;
+}
+.last,div.last {
+	margin-right: 0;
+}
+.span-1{width:30px;}
+.span-2{width:70px;}
+.span-3{width:110px;}
+.span-4{width:150px;}
+.span-5{width:190px;}
+.span-6{width:230px;}
+.span-7{width:270px;}
+.span-8{width:310px;}
+.span-9{width:350px;}
+.span-10{width:390px;}
+.span-11{width:430px;}
+.span-12{width:470px;}
+.span-13{width:510px;}
+.span-14{width:550px;}
+.span-15{width:590px;}
+.span-16{width:630px;}
+.span-17{width:670px;}
+.span-18{width:710px;margin-right:0;}
+
+
 /* - HTML Elements
 -------------------------------------------------------*/
 html {
@@ -149,25 +182,15 @@ abbr {
 .post {
 	padding: .5em 0 0;
 	margin: .5em 0 0;
-	overflow: hidden;
 }
 .post h2 {
 	padding-left: 120px;
 }
-.post-meta {
-	width: 110px;
-	margin-right: 10px;
-	float: left;
-}
 .post-meta p {
 	font-size: 10px;
 	color: #424242;
-	font-family: Verdana;
+	font-family: Helvetica, Arial;
 	margin-top: 3px;
-}
-.post-content {
-	width: 510px;
-	float: left;
 }
 
 /* - Misc 
@@ -177,6 +200,35 @@ abbr {
 }
 .meta {
 	color: #808080;
+}
+img.callout {
+	float: left;
+	margin: 0 5px 0 0;
+	border: 2px solid #000;
+}
+.clearfix:after,.container:after {
+	content: "\0020";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	overflow: hidden;
+}
+.clearfix,.container {
+	display: block;
+}
+.clear {
+	clear: both;
+}
+div.border {
+	padding-right: 4px;
+	margin-right: 5px;
+	border-right: 1px dotted #BEBEBE;
+}
+div.colborder {
+	padding-right: 24px;
+	margin-right: 25px;
+	border-right: 1px dotted #BEBEBE;
 }
 
 /* - Code
