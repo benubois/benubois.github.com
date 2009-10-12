@@ -23,5 +23,5 @@ First I tagged all of the bookmarks I wanted with `shortcut` then uploaded the f
 
 Here is the script:
 
-<script src="http://gist.github.com/207575.js"></script>
+<script src="http://gist.github.com/207575.js"> </script>
 
