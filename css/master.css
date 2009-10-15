@@ -169,6 +169,9 @@ abbr {
 	font-family: Helvetica, Arial;
 	font-size: 12px;
 }
+#nav li.selected a {
+	color: #000;
+}
 #footer p {
 	border-top: 1px dotted #BEBEBE;
 	padding: 1em 0 0;
