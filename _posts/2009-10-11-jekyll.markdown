@@ -9,32 +9,24 @@ This site uses [Jekyll][jk] as a publishing tool. These are my notes on getting 
 
 ### Installation
 
-Installation was a pain, but only because I recently upgraded to Snow Leopard which broke my [MacPorts][mp] rubygems install. I’ve seen a number of ways to fix MacPorts after upgrading to Snow Leopard, but what worked best for me was just to wipe out the entire MacPorts directory by running `sudo rm -Rf /opt/local`, installing the latest version of MacPorts and reinstall the packages I use. 
+Installation was a pain, but only because I recently upgraded to Snow Leopard which broke my [MacPorts][mp] rubygems install. I’ve seen a number of ways to fix MacPorts after upgrading to Snow Leopard, but what worked best for me was just to wipe out the entire MacPorts directory by running `sudo rm -Rf /opt/local`, installing the latest version of MacPorts and reinstalling the packages I use. 
 
 [mp]: http://www.macports.org/
 
-After getting rubygems running again installation was easy. The [Jekyll wiki][jw] has all the details on installing the gem. I also went ahead and installed [Pygments][py], for syntax highlighting. 
+### Template
+
+After getting rubygems running again installation was easy (the [Jekyll wiki][jw] has all the details on installing the gem). I also went ahead and installed [Pygments][py], for syntax highlighting. The easiest way to install is with MacPorts, however this means you also have install Python with MacPorts, which in turn seems to have just about every Unix utility and library on the planet as a dependency, so it takes a while.  
 
 [jw]: http://wiki.github.com/mojombo/jekyll/install
 [py]: http://pygments.org/
 
-Next, I went through many of the [sites using Jekyll][ie] listed on the GitHub wiki to get an idea on how to structure the project and to see how the Liquid Template system was implemented. I then went about plugging in template tags into my layouts. I had some trouble getting date to show up on my individual post pages. I thought it was a post variable, but it’s actually a page variable, i.e. <code>{{ page.date }}</code>. I’m using mostly just the basics for content and titles, but I did want every post in the to have a border above it except for the first one, so I came up with the following template:
+Next, I went through many of the [sites using Jekyll][ie] listed on the GitHub wiki to get an idea on how to structure the project and to see how the Liquid Template system was implemented. From that I was able to start plugging in template tags into my layouts. I had some trouble getting date to show up on my individual post pages. I thought it was a post variable, but it’s actually a page variable, i.e. <code class="liquid-tag">{ { page.date } }</code>.
+
+Some other observations I had were that you can use markdown or textile for a standard page as well i.e. my about page, but it has to have the right extension (.markdown .mkdn, .md for Markdown, .textile for Textile). You can use Liquid template tags on a post or a page, not just a template. 
 
 [ie]: http://wiki.github.com/mojombo/jekyll/sites
 
-{% highlight html %}
-{% for post in site.posts %}
 
-	{% if forloop.index == 1 %}
-		{% assign class = 'container post' %}
-	{% else %}
-	   {% assign class = 'container post border' %}
-	{% endif %}
+### Drawbacks
 
-	<div class="{{ class }}">
-	
-	…
-{% endfor %}
-{% endhighlight %}
-
-This way every post container gets the extra `border` class except the first one. One thing to keep in mind is that arrays are 1-based by default, hence the `forloop.index == 1`. 
+So far, I'm really enjoying Jekyll. It’s a great mix of some interesting technologies. All built to be revision control and performance friendly (no databases). There are some things that I don't like about the approach though. Since the site is generated infrequently, it rules out a lot of dynamic functionality. Blog staples like comments and social network aggregation are all done through JavaScript. It's always bothersome to visit a page and be staring at a spinner while your browser downloads someones last five tweets or photos from some overloaded API URLs. I'd much prefer to have this work be done on the backend, cached and then served quickly from the same site.
