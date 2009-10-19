@@ -163,6 +163,7 @@ li {
 	padding-top: 2px;
 	text-align: right;
 	width: 330px;
+	margin: 0;
 }
 #nav li {
 	display: inline;

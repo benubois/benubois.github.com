@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TextMate Block Sort
+title: Block Sort TextMate Command
 ---
 
 Here’s a quick TextMate command to take a document with double return separated blocks of text and sort them. 
