@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Notes and Tips on Jekyll
+title: Notes on Jekyll
 ---
 
 This site uses [Jekyll][jk] as a publishing tool. These are my notes on getting it set up.
