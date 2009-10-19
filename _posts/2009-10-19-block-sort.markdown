@@ -10,13 +10,13 @@ For example if you had some HTML block you wanted to sort like:
 
 {% highlight html %}
 <p>
-	Company B
-	<br />Company description.
+    Company B
+    <br />Company description.
 </p>
 
 <p>
-	Company A
-	<br />Company description.
+    Company A
+    <br />Company description.
 </p>
 {% endhighlight %}
 
@@ -24,13 +24,13 @@ Running this through Block Sort would give you:
 
 {% highlight html %}
 <p>
-	Company A
-	<br />Company description.
+    Company A
+    <br />Company description.
 </p>
 
 <p>
-	Company B
-	<br />Company description.
+    Company B
+    <br />Company description.
 </p>
 {% endhighlight %}
 
@@ -51,7 +51,7 @@ sort($blocks);
 
 foreach ($blocks as $block)
 {
-	print $block . "\n\n";
+    print $block . "\n\n";
 }
 ?>
 {% endhighlight %}
