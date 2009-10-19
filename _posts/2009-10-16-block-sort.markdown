@@ -13,7 +13,6 @@ For example if you had some HTML block you wanted to sort like:
 	Company B
 	<br />Company description.
 </p>
-
 <p>
 	Company A
 	<br />Company description.
@@ -27,7 +26,6 @@ Running this through Block Sort would give you:
 	Company A
 	<br />Company description.
 </p>
-
 <p>
 	Company B
 	<br />Company description.
