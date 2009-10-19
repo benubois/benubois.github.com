@@ -1,0 +1,69 @@
+---
+layout: post
+title: Notes on Jekyll
+---
+
+This site uses [Jekyll][jk] as a publishing tool. These are my notes on getting it set up.
+
+[jk]: http://jekyllrb.com/
+
+### Installation
+
+Installation was a pain, but only because I recently upgraded to Snow Leopard which broke my [MacPorts][mp] rubygems install. Since rubygems is a decency of Jekyll, I could not install it until I fixed that. I’ve seen a number of ways to fix MacPorts after upgrading to Snow Leopard, but what worked best for me was just to wipe out the entire MacPorts directory by running `sudo rm -Rf /opt/local`, installing the latest version of MacPorts and reinstalling the packages I use. 
+
+[mp]: http://www.macports.org/
+
+After getting rubygems running again, installation was easy (the [Jekyll wiki][jw] has all the details on installing the gem). I also went ahead and installed [Pygments][py], for syntax highlighting. The easiest way to install is with MacPorts, however this means you also have install Python with MacPorts, which in turn seems to have just about every Unix utility and library on the planet as a dependency, so it takes a while.  
+
+[jw]: http://wiki.github.com/mojombo/jekyll/install
+[py]: http://pygments.org/
+
+### Templates
+
+I went through many of the [sites using Jekyll][ie] listed on the GitHub wiki to get an idea on how to structure the project and to see how the Liquid Template system was implemented. From that I was able to start plugging template tags into my layouts. 
+
+I had some trouble getting date to show up on my individual post pages. I thought it was a post variable, but it is a actually a page variable when the post is the page, i.e. <code class="liquid-tag">page.date</code>. Another issue I had was actually displaying Liquid tags without them being parsed. I ended up creating a class, `.liquid-tag`, then wrapping the classified content with curly braces using jQuery: <code id="liquid-ie"> </code>. 
+
+One unexpected thing I noticed is the [Markdown][md] interpreter used by Jekyll, [Maruku][ma], will make an empty tag self closing. This seems to cause the most problems with the &lt;script&gt; tag, which will usually be empty when you are referencing a JavaScript file. The workaround here is to insert a space between the opening and closing tags.
+
+[md]: http://daringfireball.net/projects/markdown/
+[ma]: http://maruku.rubyforge.org/
+
+Some other observations I had were that you can use markdown or textile for a standard page as well i.e. my [about][about] page, but it has to have the right extension (.markdown .mkdn, .md for Markdown, .textile for Textile). Also, you can use Liquid template tags on a post or a page, not just a template. 
+
+[ie]: http://wiki.github.com/mojombo/jekyll/sites
+[about]: /about.html
+
+### Deployment
+
+The easiest way to deploy a Jekyll site is probably just to push the generated HTML up to a server. The advantage of this is that you only need to have anything special running on your host. However the disadvantage is that you can only deploy from a machine that has Jekyll installed. 
+
+I wanted to be able to deploy from anywhere using git. I’ve been using [Slicehost][sh] as a host, so installing all the necessary software was no problem since you get root access to your own VPS. After installation, I was able to clone my git repository and run Jekyll on the server.  The Apache VirtualHost entry doesn't need anything special, just to be pointed to the \_sites directory inside the cloned repository. For example: 
+
+[sh]: http://slicehost.com
+
+{% highlight apache %}
+<VirtualHost *:80>
+    ServerName benubois.com
+    ServerAlias www.benubois.com
+    DocumentRoot /var/www/com.benubois/_site
+    <Directory /var/www/com.benubois/_site>
+        RewriteEngine on
+        RewriteCond %{HTTP_HOST} ^www\.benubois\.com$ [NC]
+        RewriteRule ^(.*)$ http://benubois.com/$1 [L,R=301]
+    </Directory>
+    <FilesMatch "\.(js|css|html|xml)$">
+        SetOutputFilter DEFLATE
+    </FilesMatch>
+</VirtualHost>
+{% endhighlight %}
+
+In the future, I hope to update the setup so that a push to github will trigger a commit hook that will update the server automatically.
+
+### Drawbacks
+
+There are some things that I don't like about the approach though. Since the site is generated infrequently, it rules out a lot of dynamic functionality. 
+
+Blog staples like comments and social network aggregation are commonly loaded through JavaScript. It’s bothersome to visit a page and be staring at a spinner while your browser downloads someones last five tweets or photos using JavaScript. I’d much prefer to have this work be done on the server side, cached and then served quickly, which is why I’m using Jekyll in the first place. You end up throwing away all the performance benefits you get from having a static site by forcing the client to do all the work. It seems like it might be possible to work around this by embedding other code in your templates, but there isn’t much built in support for these things.
+
+Minor complaints aside, I’m really enjoying Jekyll. It’s a great mix of interesting technologies, built to be revision control friendly, lightweight and have excellent performance. 
