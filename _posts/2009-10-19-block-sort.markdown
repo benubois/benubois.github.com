@@ -40,7 +40,7 @@ For the command settings, I have:
 * Output: Create New Document
 
 
-And is the command:
+And here is the command:
 
 {% highlight php %}
 #!/usr/bin/env php 
