@@ -125,7 +125,12 @@ abbr {
 	border-bottom: 1px dotted #ccc;
 	cursor: help;
 }
-
+ul {
+	margin: 0 0 1.5em 1em;
+}
+li {
+	list-style-type: disc;
+}
 /* - Structure
 -------------------------------------------------------*/
 #header {
@@ -158,6 +163,7 @@ abbr {
 	padding-top: 2px;
 	text-align: right;
 	width: 330px;
+	margin: 0;
 }
 #nav li {
 	display: inline;
