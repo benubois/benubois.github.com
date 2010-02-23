@@ -44,7 +44,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 .container {
 	width: 630px;
 	margin: 0 auto;
@@ -131,6 +130,7 @@ ul {
 li {
 	list-style-type: disc;
 }
+
 /* - Structure
 -------------------------------------------------------*/
 #header {
@@ -160,23 +160,31 @@ li {
 }
 #nav {
 	float: right;
-	padding-top: 2px;
 	text-align: right;
 	width: 330px;
 	margin: 0;
 }
 #nav li {
-	display: inline;
+	list-style-type: none;
+	display: block;
 	padding-left: 20px;
+	float: right;
 }
 #nav li a {
+	display: block;
+	float: right;
 	font-weight: bold;
 	text-decoration: none;
 	font-family: Helvetica, Arial;
 	font-size: 12px;
+	padding: 4px 7px 3px 6px;
 }
 #nav li.selected a {
-	color: #000;
+	color: #fff;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background: #3061BE;
 }
 #footer p {
 	border-top: 1px dotted #BEBEBE;
@@ -196,10 +204,28 @@ li {
 	padding-left: 120px;
 }
 .post-meta p {
-	font-size: 10px;
-	color: #424242;
-	font-family: Helvetica, Arial;
 	margin-top: 3px;
+	font-size: 10px;
+	font-family: Helvetica, Arial;
+}
+.post-meta p a,
+.post-meta p strong {
+	color: #FFF;
+	padding: 5px 5px 3px 5px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+.post-meta p a {
+	background: #3061BE;
+	text-decoration: none;
+}
+.post-meta p a:hover {
+	background: #000;
+}
+.post-meta p strong {
+	background: #424254;
+	font-weight: normal;
 }
 
 /* - Misc 
