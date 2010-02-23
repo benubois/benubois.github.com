@@ -211,10 +211,12 @@ li {
 .post-meta p a,
 .post-meta p strong {
 	color: #FFF;
-	padding: 5px 5px 3px 5px;
+	padding: 4px 5px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
+	display: block;
+	line-height: 1;
 }
 .post-meta p a {
 	background: #3061BE;

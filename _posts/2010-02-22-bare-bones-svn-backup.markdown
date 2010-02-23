@@ -5,7 +5,7 @@ title: Bare Bones Subversion Backup
 
 This is a basic incremental Subversion backup script. It is meant to be run daily by [cron][c]. It requires Ruby.
 
-There are many other excellent svn backup scripts out there that do way more than this one, but the goal was just to create something simple and hopefully easy to use.
+There are many other excellent svn backup scripts out there that do way more than this one. But my goal was just to create something simple and hopefully easy to use.
 
 [c]: http://www.freebsd.org/cgi/man.cgi?query=cron&manpath=FreeBSD+8.0-RELEASE
 
