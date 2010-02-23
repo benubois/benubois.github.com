@@ -106,6 +106,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: Helvetica, Arial sans-serif;
 }
 h2 {
+	color: #000;
 	font-size: 1.2em;
 	margin-bottom: 0.2em;
 }
@@ -215,8 +216,6 @@ li {
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
-	display: block;
-	line-height: 1;
 }
 .post-meta p a {
 	background: #3061BE;
@@ -226,7 +225,7 @@ li {
 	background: #000;
 }
 .post-meta p strong {
-	background: #424254;
+	background: #000;
 	font-weight: normal;
 }
 
