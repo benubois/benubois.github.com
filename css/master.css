@@ -1,53 +1,46 @@
 /* - Reset (http://meyerweb.com/eric/tools/css/reset/)
 -------------------------------------------------------*/
-html,body,div,span,applet,object,iframe,
-h1,h2,h3,h4,h5,h6,p,blockquote,pre,
-a,abbr,acronym,address,big,cite,code,
-del,dfn,em,font,img,ins,kbd,q,s,samp,
-small,strike,strong,sub,sup,tt,var,
-b,u,i,center,
-dl,dt,dd,ol,ul,li,
-fieldset,form,label,legend,
-table,caption,tbody,tfoot,thead,tr,th,td {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	outline: 0;
 	font-size: 100%;
+	font: inherit;
 	vertical-align: baseline;
-	background: transparent;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
 body {
 	line-height: 1;
 }
-ol,ul {
+ol, ul {
 	list-style: none;
 }
-blockquote,q {
+blockquote, q {
 	quotes: none;
 }
-blockquote:before,blockquote:after,
-q:before,q:after {
+blockquote:before, blockquote:after,
+q:before, q:after {
 	content: '';
 	content: none;
-}
-:focus {
-	outline: 0;
-}
-ins {
-	text-decoration: none;
-}
-del {
-	text-decoration: line-through;
 }
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-.container {
-	width: 630px;
-	margin: 0 auto;
-	overflow: hidden;
 }
 
 /* - Grid
@@ -134,14 +127,14 @@ li {
 
 /* - Structure
 -------------------------------------------------------*/
-#header {
+header {
 	background: #D7D7D7;
 	border-bottom: 2px solid #BEBEBE;
 	padding: 8px 0;
 	margin-bottom: 1.5em;
 	line-height: 1;
 }
-#header p {
+header p {
 	margin-bottom: 0;
 }
 #logo {
@@ -159,19 +152,19 @@ li {
 #logo a:hover {
 	color: #000;
 }
-#nav {
+nav ul {
 	float: right;
 	text-align: right;
 	width: 330px;
 	margin: 0;
 }
-#nav li {
+nav li {
 	list-style-type: none;
 	display: block;
 	padding-left: 20px;
 	float: right;
 }
-#nav li a {
+nav li a {
 	display: block;
 	float: right;
 	font-weight: bold;
@@ -180,14 +173,14 @@ li {
 	font-size: 12px;
 	padding: 4px 7px 3px 6px;
 }
-#nav li.selected a {
+nav li.selected a {
 	color: #fff;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	background: #3061BE;
 }
-#footer p {
+footer p {
 	border-top: 1px dotted #BEBEBE;
 	padding: 1em 0 0;
 	margin: 1em 0 0;
@@ -204,27 +197,27 @@ li {
 .post h2 {
 	padding-left: 120px;
 }
-.post-meta p {
+.post-meta {
 	margin-top: 3px;
 	font-size: 10px;
 	font-family: Helvetica, Arial;
 }
-.post-meta p a,
-.post-meta p strong {
-	color: #FFF;
+.pill {
 	padding: 4px 5px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
+	color: #FFF;
 }
-.post-meta p a {
+a.pill {
 	background: #3061BE;
 	text-decoration: none;
+	color: #FFF;
 }
-.post-meta p a:hover {
+a:hover.pill {
 	background: #000;
 }
-.post-meta p strong {
+time.pill {
 	background: #000;
 	font-weight: normal;
 }
