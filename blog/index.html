@@ -1,0 +1,25 @@
+---
+layout: default
+title: Blog
+---
+
+{% for post in site.posts %}
+
+	{% if forloop.index == 1 %}
+		{% assign class = 'container post' %}
+	{% else %}
+	   {% assign class = 'container post separator' %}
+	{% endif %}
+	
+	<article class="{{ class }}">
+		
+		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+		<div class="post-meta span-3">
+			<a href="{{ post.url }}" class="pill"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%B %d, %Y" }}</time></a>
+		</div>
+		<div class="post-content span-15 last">
+			{{ post.content }}
+		</div>
+	</article>
+
+{% endfor %}

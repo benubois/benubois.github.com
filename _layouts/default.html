@@ -4,8 +4,8 @@
 	<meta charset="utf-8" />
 	<title>Ben Ubois | {{ page.title }}</title>
 	<link rel="alternate" type="application/atom+xml" title="Ben Ubois - Atom" href="http://feeds.feedburner.com/benubois" />
-	<link rel="stylesheet" href="/css/master.css" />
-	<script src="/js/master.js"></script>
+	<link rel="stylesheet" href="/css/master.css?{{ site.time | date: "%Y%m%d%H%M%S" }}" />
+	<script src="/js/master.js?{{ site.time | date: "%Y%m%d%H%M%S" }}"></script>
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-172060-6']);
@@ -27,21 +27,24 @@
 				<ul class="clearfix">
 					<li{% if page.title == 'About' %} class="selected"{% endif %}><a href="/about.html">About</a></li>
 					<li{% if page.title == 'Archive' %} class="selected"{% endif %}><a href="/archive.html">Archive</a></li>
+					<li{% if page.title == 'Blog' %} class="selected"{% endif %}><a href="/blog/">Blog</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
 
-	<section id="content-wrap">
-		<div class="container">
+	<div class="site-wrap">
+		<section id="content-wrap">
+			<div class="container">
 
-		{{ content }}
+			{{ content }}
 			
-		</div>
-	</section>
+			</div>
+		</section>
+	</div>
 
 	<footer class="container">
 		<p>Copyright &copy; 2009&ndash;{{ site.time | date: "%Y" }} <a href="mailto:ben@benubois.com">Ben Ubois</a></p>
-	</div>
+	</footer>
 </body>
 </html>
