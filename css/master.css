@@ -83,17 +83,19 @@ html {
 }
 body {
 	font-family: Georgia, serif;
-	font-size: 15px;
+	font-size: 16px;
 	line-height: 1.5;
-	color: #424254;
+	color: #444;
 	padding-bottom: 20px;
 	background: #000;
 }
 a,a:visited {
 	color: #3061BE;
+	text-decoration: none;
 }
 a:hover,a:active {
-	color: #000;
+	color: #3061BE;
+	text-decoration: underline;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-weight:normal;
@@ -101,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h2 {
 	font-weight: bold;
-	color: #000;
+	color: #444;
 	font-size: 1.2em;
 	margin-bottom: 0.4em;
 }
@@ -126,12 +128,18 @@ ul {
 li {
 	list-style-type: disc;
 }
+hr.space {
+	border: none;
+	margin: 20px 0;
+	clear: both;
+	width: 100%;
+}
 
 /* - Structure
 -------------------------------------------------------*/
 header {
 	background: #D7D7D7;
-	border-bottom: 2px solid #BEBEBE;
+	border-bottom: 1px solid #BEBEBE;
 	padding: 8px 0;
 	line-height: 1;
 }
@@ -171,7 +179,7 @@ nav li a {
 	font-weight: bold;
 	text-decoration: none;
 	font-family: Helvetica, Arial;
-	font-size: 12px;
+	font-size: 14px;
 	padding: 4px 7px 3px 6px;
 }
 nav li.selected a {
@@ -181,9 +189,14 @@ nav li.selected a {
 	border-radius: 3px;
 	background: #3061BE;
 }
+nav li a:hover {
+	text-decoration: none;
+	color: #FFF;
+}
 .site-wrap {
 	padding: 1.5em 0;
-	background: #f5f5f5;
+	background: #f5f5f5 url(/img/bg_cross_scratches.png);
+	border-bottom: 1px solid #BEBEBE;
 }
 #content-wrap {
 	margin: 0 auto;
@@ -198,7 +211,7 @@ footer p {
 	padding: 1em 0 0;
 	margin: 1em 0 0;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 11px;
+	font-size: 12px;
 	color: #FFF;
 }
 
@@ -230,6 +243,21 @@ a:hover.pill {
 time.pill {
 	background: #000;
 	font-weight: normal;
+}
+.title {
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	margin-bottom: 1px;
+}
+a:hover .title {
+	text-decoration: none;
+	color: #000;
+}
+.subtitle {
+	color: #999;
+	font-size: 12px;
+	font-family: Helvetica, sans-serif;
 }
 
 /* - Misc 
@@ -272,13 +300,15 @@ div.colborder {
 	border-right: 1px dotted #BEBEBE;
 }
 .tile {
-	height: 230px;
 	border: 1px solid #ccc;
+	padding: 3px;
 	border-radius: 3px;
 	display: block;
+	margin-bottom: 5px;
 }
-:hover.tile {
+a:hover .tile {
 	border-color: #3061BE;
+	text-decoration: none;
 }
 
 /* - Code
