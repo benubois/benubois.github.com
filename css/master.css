@@ -189,7 +189,8 @@ nav li a {
 	font-size: 14px;
 	padding: 4px 7px 4px 6px;
 }
-nav li.selected a {
+nav li.selected a,
+nav li.selected a:hover {
 	color: #fff;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
