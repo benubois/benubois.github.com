@@ -138,14 +138,11 @@ hr.space {
 /* - Structure
 -------------------------------------------------------*/
 header {
-	background: #D7D7D7;
-	background: #f2f2f2;
-	background: -moz-linear-gradient(top, #f2f2f2 0%, #d7d7d7 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(100%,#d7d7d7));
-	background: -webkit-linear-gradient(top, #f2f2f2 0%,#d7d7d7 100%);
-	background: -o-linear-gradient(top, #f2f2f2 0%,#d7d7d7 100%);
-	background: -ms-linear-gradient(top, #f2f2f2 0%,#d7d7d7 100%);
-	background: linear-gradient(top, #f2f2f2 0%,#d7d7d7 100%);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: url(/img/nav_bg.png) 0 0 repeat-x;
 	border-bottom: 1px solid #BEBEBE;
 	padding: 8px 0;
 	line-height: 1;
@@ -203,6 +200,11 @@ nav li.selected a:hover {
 nav li a:hover {
 	text-decoration: none;
 	color: #000;
+}
+.wrap {
+	position: relative;
+	z-index: 2;
+	margin-top: 39px;
 }
 .site-wrap {
 	padding: 1.5em 0;
