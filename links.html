@@ -1,0 +1,27 @@
+---
+layout: default
+title: Links
+---
+<script>
+$(document).ready(function () {
+	$.ajax({ 
+		url:'http://feeds.pinboard.in/json/v1/u:benubois', 
+		jsonp:"cb", 
+		dataType:'jsonp', 
+		success: function(data) {
+			var links = {
+				links: data.map(function (link) {
+					link.date = Date.parse(link.dt.substring(0, link.dt.length-1)).toString('MMMM d, yyyy');
+					return link;
+				}) 
+			}
+			$.get('/templates/links.mustache', function (template) {
+				var output = Mustache.render(template, links);
+				$('#links-target').html(output);
+			});
+		}
+	});
+});
+</script>
+<p><a href="http://feeds.pinboard.in/rss/u:benubois/" title="Pinboard (benubois)">Subscribe to Links Feed</a>.</p>
+<div id="links-target"></div>

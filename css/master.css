@@ -110,6 +110,9 @@ h2 {
 h2 a {
 	text-decoration: none;
 }
+h2.border {
+	border-bottom: 1px solid #ddd;
+}
 h3 {
 	font-size: 1em;
 	margin-bottom: 0.2em;
@@ -215,10 +218,6 @@ nav li a:hover {
 	margin: 0 auto;
 	padding: .8em 0;
 	width: 730px;
-	background: #fff;
-	-moz-box-shadow: 0 0 3px 0px #ccc;
-	-webkit-box-shadow: 0 0 3px 0px #ccc;
-	box-shadow: 0 0 3px 0px #ccc;
 }
 footer p {
 	padding: 1em 0 0;
@@ -276,7 +275,7 @@ a:hover .title {
 /* - Misc 
 -------------------------------------------------------*/
 .separator {
-	border-top: 1px solid #e2e2e2;
+	border-top: 1px solid #DDD;
 	padding: .5em 0 0;
 	margin: .5em 0 0;
 }
@@ -318,6 +317,7 @@ div.colborder {
 	border-radius: 3px;
 	display: block;
 	margin-bottom: 5px;
+	background-color: #FFF;
 }
 a:hover .tile {
 	border-color: #3061BE;
@@ -329,14 +329,14 @@ a:hover .tile {
 code {
 	font-family: Consolas, Monaco, monospace;
 	font-size: 12px;
-	background: #E9E9E9;
+	background: #FFF;
 }
 pre,
 #content-wrap .gist .gist-file .gist-data pre {
 	font-family: Consolas, Monaco, monospace !important;
 	font-size: 12px;
 	padding: 5px 10px;
-	background: #E9E9E9 !important;
+	background: #fff !important;
 	font-weight: bold;
 	overflow: auto;
 	border: none !important;
