@@ -10,6 +10,12 @@ layout: nil
 		<priority>1.0</priority>
 	</url>
 	<url>
+		<loc>http://benubois.com/links.html</loc>
+		<lastmod>{{ site.time | date_to_xmlschema}}</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
 		<loc>http://benubois.com/about.html</loc>
 		<lastmod>{{ site.time | date_to_xmlschema}}</lastmod>
 		<changefreq>monthly</changefreq>

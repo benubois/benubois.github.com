@@ -22,7 +22,7 @@ benubois.templateRequest = $.get('/templates/links.mustache', function (template
 });
 	
 $.when(benubois.linksRequest, benubois.templateRequest).then(function(){
-	var output = Mustache.render(window.benubois.linksTemplate, benubois.links);
+	var output = Mustache.render(benubois.linksTemplate, benubois.links);
 	$('#links-target').html(output);
 });
 </script>
