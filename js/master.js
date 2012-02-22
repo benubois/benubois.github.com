@@ -121,6 +121,19 @@ try{r=Date.Grammar.start.call({},s);}catch(e){return null;}
 return((r[1].length===0)?r[0]:null);};Date.getParseFunction=function(fx){var fn=Date.Grammar.formats(fx);return function(s){var r=null;try{r=fn.call({},s);}catch(e){return null;}
 return((r[1].length===0)?r[0]:null);};};Date.parseExact=function(s,fx){return Date.getParseFunction(fx)(s);};
 
+benubois = {
+	links: function () {
+		return $.ajax({ 
+			url:'http://feeds.pinboard.in/json/v1/u:benubois', 
+			jsonp:"cb", 
+			dataType:'jsonp', 
+		});
+	},
+	template: function (templateName) {
+		return $.get('/templates/' + templateName + '.mustache');
+	}
+}
+
 benubois.init = {
 	liquid: function () {
 		// Wrap Liquid Tags

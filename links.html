@@ -3,27 +3,18 @@ layout: default
 title: Links
 ---
 <script>
-benubois.linksRequest = $.ajax({ 
-	url:'http://feeds.pinboard.in/json/v1/u:benubois', 
-	jsonp:"cb", 
-	dataType:'jsonp', 
-	success: function(data) {
-		window.benubois.links = {
-			links: data.map(function (link) {
-				link.date = Date.parse(link.dt.substring(0, link.dt.length-1)).toString('MMMM d, yyyy');
-				return link;
-			}) 
-		}
+$.when(benubois.links(), benubois.template(links)).then(function(links, template){
+	console.log(links);
+	console.log(template);
+		
+	links = {
+		links: links[0].map(function (link) {
+			link.date = Date.parse(link.dt.substring(0, link.dt.length-1)).toString('MMMM d, yyyy');
+			return link;
+		}) 
 	}
-});
-	
-benubois.templateRequest = $.get('/templates/links.mustache', function (template) {
-	window.benubois.linksTemplate = template;
-});
-	
-$.when(benubois.linksRequest, benubois.templateRequest).then(function(){
-	var output = Mustache.render(benubois.linksTemplate, benubois.links);
-	$('#links-target').html(output);
+		
+	$('#links-target').html(Mustache.render(template[0], links));
 });
 </script>
 <p><a href="http://feeds.pinboard.in/rss/u:benubois/" title="Pinboard (benubois)">Subscribe to Links Feed</a>.</p>
