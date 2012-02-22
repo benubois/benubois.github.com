@@ -3,17 +3,13 @@ layout: default
 title: Links
 ---
 <script>
-$.when(benubois.links(), benubois.template(links)).then(function(links, template){
-	console.log(links);
-	console.log(template);
-		
+$.when(benubois.links(), benubois.template('links')).then(function(links, template){
 	links = {
 		links: links[0].map(function (link) {
 			link.date = Date.parse(link.dt.substring(0, link.dt.length-1)).toString('MMMM d, yyyy');
 			return link;
 		}) 
 	}
-		
 	$('#links-target').html(Mustache.render(template[0], links));
 });
 </script>
