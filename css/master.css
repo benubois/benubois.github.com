@@ -102,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: Helvetica, Arial, sans-serif;
 }
 h2 {
-	font-weight: bold;
+	-webkit-font-smoothing: antialiased;
 	color: #444;
 	font-size: 1.2em;
 	margin-bottom: 0.4em;
@@ -253,7 +253,6 @@ time.pill {
 }
 .title {
 	font-family: Helvetica, sans-serif;
-	font-weight: bold;
 	font-size: 16px;
 	margin-bottom: 1px;
 }
@@ -357,6 +356,14 @@ pre,
 div.highlight {
 	margin-bottom: 1.2em;
 }
+
+/*--[ Retina Displays ]--*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	body {
+		-webkit-font-smoothing: antialiased;
+	}
+}
+
 /*--[ Highlight ]--*/
 .highlight  { background: #ffffff; }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
